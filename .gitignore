@@ -1,0 +1,25 @@
+# Local sandbox runtime state
+config/
+sandboxes/
+sessions/
+cache/
+logs/
+
+# Codex/private state
+auth.json
+history.jsonl
+installation_id
+models_cache.json
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+
+# OS/editor files
+.DS_Store
+.idea/
+.vscode/
+
+# Build/package output
+dist/
+build/
+tmp/
