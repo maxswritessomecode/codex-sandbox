@@ -16,13 +16,13 @@ Make sure `~/.local/bin` is on your `PATH`.
 ## Create a Sandbox
 
 ```sh
-codex-sandbox init mcp-testing --purpose "MCP server testing"
+codex-sandbox init agent-lab --purpose "Skills, MCP, and plugin testing"
 ```
 
 This creates:
 
 ```text
-~/cc-sandboxes/mcp-testing/
+~/cc-sandboxes/agent-lab/
   config/
   workspace/
   meta.json
@@ -43,19 +43,25 @@ codex-sandbox list
 ## Show a Sandbox Path
 
 ```sh
-codex-sandbox path mcp-testing
+codex-sandbox path agent-lab
 ```
 
 ## Run Codex in a Sandbox
 
 ```sh
-codex-sandbox run mcp-testing
+codex-sandbox run agent-lab
 ```
 
 To pass a custom command:
 
 ```sh
-codex-sandbox run mcp-testing codex --sandbox workspace-write
+codex-sandbox run agent-lab codex --sandbox workspace-write
 ```
 
 The command runs from the sandbox workspace with `CODEX_HOME` pointed at the sandbox config directory.
+
+## Port Collisions
+
+Each sandbox gets its own config and workspace, but TCP ports are still shared by your operating system. If a skill, MCP server, plugin, dev server, database, or helper service binds to a port such as `3000`, `5173`, `8000`, or `11434`, it can collide with the same service from your main Codex config or another sandbox.
+
+Use explicit unique ports when running multiple environments at the same time.

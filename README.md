@@ -1,8 +1,8 @@
 # Codex Sandbox
 
-Disposable workspaces for Codex agents, MCP tools, and plugin testing.
+Disposable workspaces for Codex agents, skills, MCP tools, plugins, and config experiments.
 
-Codex Sandbox gives you a clean place to test agent configs without polluting your main `~/.codex` setup. Use it when you want to try MCP servers, plugins, memories, or feature flags in an isolated workspace that is easy to reset.
+Codex Sandbox gives you a clean place to test agent configs without polluting your main `~/.codex` setup. Use it when you want to try skills, MCP servers, plugins, memories, feature flags, or workflow experiments in an isolated workspace that is easy to reset.
 
 ## Install
 
@@ -18,8 +18,8 @@ Make sure `~/.local/bin` is on your `PATH`.
 ## Quick Start
 
 ```sh
-codex-sandbox init mcp-testing --purpose "MCP server testing"
-codex-sandbox run mcp-testing
+codex-sandbox init agent-lab --purpose "Skills, MCP, and plugin testing"
+codex-sandbox run agent-lab
 ```
 
 `codex-sandbox run` launches Codex from the sandbox workspace with `CODEX_HOME` pointed at that sandbox's config directory.
@@ -27,9 +27,13 @@ codex-sandbox run mcp-testing
 ## Why Use It
 
 - Keep experimental Codex config separate from your daily setup.
-- Test MCP servers and plugins in a named workspace.
+- Test skills, MCP servers, plugins, and feature flags in a named workspace.
 - Capture project purpose and metadata in one place.
 - Avoid accidentally publishing local auth, session, cache, and SQLite state.
+
+## Important Note
+
+Codex Sandbox isolates Codex config and workspace files; it does not virtualize your whole machine. Anything you install or run that binds a TCP port can still collide with services from your main Codex setup or another sandbox if they use the same host and port. Give local servers explicit, unique ports when you run multiple environments side by side.
 
 ## Commands
 
@@ -71,7 +75,7 @@ history.jsonl
 ```json
 {
   "name": "codex-sandbox",
-  "purpose": "Disposable Codex workspace for MCP and plugin testing",
+  "purpose": "Disposable Codex workspace for skills, MCP, and plugin testing",
   "tool": "codex"
 }
 ```
