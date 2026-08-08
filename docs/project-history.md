@@ -1,6 +1,6 @@
-# Rename Notes
+# Project History
 
-The project was renamed from `cc-sandboxes` / `mcp-lab` to **Codex Sandbox**.
+The project was renamed from an internal sandbox prototype to **Codex Sandbox**.
 
 Recommended naming:
 

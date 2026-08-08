@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "codex-sandbox"
+version = "0.1.0"
+description = "Disposable workspaces for Codex agents, skills, MCP tools, plugins, and config experiments."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [
+  { name = "maxswritessomecode" }
+]
+keywords = ["codex", "agents", "skills", "mcp", "sandbox", "plugins"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Software Development",
+  "Topic :: Utilities"
+]
+
+[project.urls]
+Homepage = "https://github.com/maxswritessomecode/codex-sandbox"
+Repository = "https://github.com/maxswritessomecode/codex-sandbox"
+Issues = "https://github.com/maxswritessomecode/codex-sandbox/issues"
+
+[project.scripts]
+codex-sandbox = "codex_sandbox:main"
+
+[tool.setuptools]
+py-modules = ["codex_sandbox"]
