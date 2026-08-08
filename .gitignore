@@ -19,6 +19,10 @@ models_cache.json
 .idea/
 .vscode/
 
+# Python
+__pycache__/
+*.pyc
+
 # Build/package output
 dist/
 build/
