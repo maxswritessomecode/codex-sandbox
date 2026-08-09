@@ -1,6 +1,6 @@
 # Commands
 
-`codex-sandbox` is a small Python CLI for creating isolated Codex workspaces.
+`codex-sandbox` is a small Python CLI for creating named Codex config/workspace environments.
 
 ## Install Locally
 
@@ -76,7 +76,7 @@ To pass a custom command:
 codex-sandbox run demo env
 ```
 
-The command runs from the sandbox workspace with `CODEX_HOME` pointed at the sandbox config directory.
+The command runs from the sandbox workspace with `CODEX_HOME` pointed at the sandbox config directory. This is the core behavior of the tool.
 
 ## Check Your Setup
 

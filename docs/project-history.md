@@ -8,6 +8,6 @@ Recommended naming:
 - Display name: `Codex Sandbox`
 - Command: `codex-sandbox`
 - Python entry file: `codex_sandbox.py`
-- Tagline: `Disposable workspaces for Codex agents, skills, MCP tools, plugins, and config experiments.`
+- Tagline: `Named Codex config/workspace environments for skills, MCP tools, plugins, and experiments.`
 
 The original local sandbox state contains private runtime files and should not be committed directly.

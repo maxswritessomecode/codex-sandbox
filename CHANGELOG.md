@@ -7,3 +7,4 @@
 - Added packaging metadata for `pipx` and editable installs.
 - Set the default sandbox root to `~/codex-sandboxes`.
 - Added documentation for isolated Codex config/workspaces and TCP port collision limits.
+- Repositioned the project as config/workspace separation for Codex power users, not broad security sandboxing.

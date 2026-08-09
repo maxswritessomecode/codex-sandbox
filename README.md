@@ -1,8 +1,18 @@
 # Codex Sandbox
 
-Disposable workspaces for Codex agents, skills, MCP tools, plugins, and config experiments.
+A tiny CLI for named Codex config/workspace environments.
 
-Codex Sandbox gives you a clean place to test agent configs without polluting your main `~/.codex` setup. Use it when you want to try skills, MCP servers, plugins, memories, feature flags, or workflow experiments in an isolated workspace that is easy to discard and recreate.
+Codex Sandbox is for Codex power users who experiment with skills, MCP servers, plugins, memories, feature flags, or alternate config states and do not want to clutter their daily `~/.codex` setup.
+
+It is intentionally small. Under the hood, it launches Codex with a sandbox-specific `CODEX_HOME` and working directory:
+
+```sh
+CODEX_HOME=~/codex-sandboxes/demo/config
+cwd=~/codex-sandboxes/demo/workspace
+codex
+```
+
+Use it when that convention is worth naming, listing, and repeating.
 
 ## Install
 
@@ -62,6 +72,20 @@ That creates:
 - Capture project purpose and metadata in one place.
 - Avoid accidentally publishing local auth, session, cache, and SQLite state.
 
+## Who It Is For
+
+- Codex users who maintain more than one config state.
+- People testing skills, MCP servers, or plugins before adding them to their main setup.
+- Tutorial authors who want repeatable clean Codex examples.
+- Developers who want separate personal, work, demo, and experiment Codex homes.
+
+## Who It Is Not For
+
+- Casual Codex users with one stable config.
+- People expecting Docker-style isolation.
+- People who only need a one-off command like `CODEX_HOME=/tmp/codex-test codex`.
+- Anyone looking for a security sandbox. Use Codex's built-in sandbox modes, containers, or VMs for that.
+
 ## Important Note
 
 Codex Sandbox is config isolation, not a security boundary. It does not containerize processes, virtualize the network, scrub environment variables, or prevent tools from accessing files and services your normal user account can access.
@@ -116,6 +140,16 @@ history.jsonl
 }
 ```
 
+## Roadmap
+
+These are the features that would make Codex Sandbox more useful than a thin `CODEX_HOME` wrapper:
+
+- `codex-sandbox clone SOURCE DEST` to copy a known-good config into a new sandbox while excluding runtime state.
+- `codex-sandbox diff NAME` to compare a sandbox config against your main `~/.codex`.
+- `codex-sandbox reset NAME` to discard and recreate a sandbox deliberately.
+- Templates such as `blank`, `skills`, `mcp`, and `plugin-dev`.
+- Safer export/import for sharing examples without auth, sessions, caches, or SQLite state.
+
 ## Development
 
 Run the tests with:
@@ -130,4 +164,4 @@ MIT
 
 ## Positioning
 
-Codex Sandbox is for developers and technical operators who want a safe place to test agent workflows before moving them into their main Codex environment.
+Codex Sandbox is a convenience tool for repeatable Codex config/workspace experiments. It is useful when you frequently switch between Codex setups; it is probably unnecessary if you only use one setup.
