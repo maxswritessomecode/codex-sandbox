@@ -1,3 +1,13 @@
+# Codex Sandbox (archived)
+
+This project has moved to [Agent Profile](https://github.com/maxswritessomecode/agent-profile).
+
+Agent Profile is the renamed, multi-agent version of this tool. It supports named configuration profiles and workspaces for both Codex and Claude Code.
+
+Please use the new repository for current code, releases, documentation, and issues.
+
+---
+
 # Agent Profile
 
 A small CLI for named Codex and Claude Code configuration profiles and workspaces.
