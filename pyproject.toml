@@ -3,16 +3,16 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "codex-sandbox"
-version = "0.1.0"
-description = "Named Codex config/workspace environments for skills, MCP tools, plugins, and experiments."
+name = "agent-profile"
+version = "0.3.0"
+description = "Named configuration profiles and workspaces for AI coding agents."
 readme = "README.md"
 requires-python = ">=3.10"
 license = { file = "LICENSE" }
 authors = [
   { name = "maxswritessomecode" }
 ]
-keywords = ["codex", "agents", "skills", "mcp", "sandbox", "plugins"]
+keywords = ["claude", "codex", "agents", "profiles", "skills", "mcp", "plugins"]
 classifiers = [
   "Development Status :: 3 - Alpha",
   "Environment :: Console",
@@ -25,12 +25,13 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/maxswritessomecode/codex-sandbox"
-Repository = "https://github.com/maxswritessomecode/codex-sandbox"
-Issues = "https://github.com/maxswritessomecode/codex-sandbox/issues"
+Homepage = "https://github.com/maxswritessomecode/agent-profile"
+Repository = "https://github.com/maxswritessomecode/agent-profile"
+Issues = "https://github.com/maxswritessomecode/agent-profile/issues"
 
 [project.scripts]
-codex-sandbox = "codex_sandbox:main"
+agent-profile = "agent_profile:main"
+codex-sandbox = "agent_profile:main"
 
 [tool.setuptools]
-py-modules = ["codex_sandbox"]
+py-modules = ["agent_profile"]

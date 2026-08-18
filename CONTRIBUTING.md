@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for helping improve Codex Sandbox.
+Thanks for helping improve Agent Profile.
 
 ## Development
 
@@ -13,6 +13,6 @@ python3 -m unittest discover -s tests
 ## Guidelines
 
 - Keep the CLI dependency-free unless a dependency removes significant complexity.
-- Do not commit sandbox runtime state such as `auth.json`, `history.jsonl`, sessions, caches, or SQLite files.
+- Do not commit profile runtime state such as `auth.json`, `history.jsonl`, sessions, caches, or SQLite files.
 - Document behavior that affects user safety or local machine state.
-- Keep examples aligned with the public command name: `codex-sandbox`.
+- Keep examples aligned with the public command name: `agent-profile`.
